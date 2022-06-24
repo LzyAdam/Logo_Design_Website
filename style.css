@@ -1,0 +1,142 @@
+/* Global view */
+body{
+     font-family: 'Merriweather', serif;
+     color: aliceblue;
+     background-color: #ebebeb;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.container{
+    /* background-color: blueviolet; */
+    min-height: 500px;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 150px;
+
+}
+
+.header-container{
+    background-color: rgb(44, 43, 43);
+    min-height: 100px;
+    margin-bottom: 40px;
+    /* 上面导航条不动下面内容动弹 */
+    position: fixed;
+    width: 100%;
+    /* 上面导航条不动下面内容动弹 */
+    /* display: flex; */
+}
+header{
+    max-width: 1024px;
+   
+    min-height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.col p{
+    color: rgb(208, 207, 207);
+    font-size: 0.875rem;
+    
+    padding: 5px 10px;
+}
+.col{
+    
+    width: 30%;
+    margin-bottom: 40px;
+    background-color: rgb(65, 198, 154);
+}
+.hide-desktop-only{
+    display: none;
+    /* 这个是隐藏图标 其实就是container里面写了一个不显示的code */
+}
+.col img{
+    width: 100%;
+    height: auto;
+
+}
+.col p::first-line{
+    font-weight: 700;
+}
+.mybutton{
+    color: aliceblue;
+    padding: 10px 25px;
+    border-style: solid;
+    border-width: 2px;
+    margin-left: 20px;
+}
+.bold{
+    font-weight: 700;
+}
+.mob-wrapper{
+    display: none;
+}
+
+
+/* Tablet view */
+@media(max-width:768px){
+   .col{
+       width: 45%;
+   }
+   .hide-desktop-only{
+    display: block;
+}
+/* header{
+    display: block;
+    text-align: center;
+} */
+nav{
+    display: none;
+}
+nav a{
+    display: block;
+    margin-left: 0px;
+}
+.logo{
+   
+    padding: 40px 0;
+}
+.mybutton{
+    margin-left: 0%;
+}
+.header-container{position: fixed;}
+.container{padding-top: 260px;}
+.mob-wrapper{
+    display: block;
+    padding-right: 60px;
+}
+.mob-nav{
+    display: none;
+    position: absolute;
+    padding-top: 10px;
+}
+.navbutton{
+    display: block;
+    background-color: aquamarine;
+    padding: 15px 30px;
+    margin-left: -50px;
+    text-align: center;
+}
+}
+/* mobile view */
+@media(max-width:600px){
+    .col{
+        width: 100%;
+    }
+    .hide-mobile-only{
+        display: block;
+    }
+    .mob-wrapper{
+        display: block;
+    }
+    .mob-nav{
+        display: none;
+    }
+    
+}
